@@ -8,10 +8,10 @@ do_auth()
 
 pages = {
   "Навигация": [
-    st.Page("pages/personal_account.py", title="Личный кабинет"),
-    st.Page("pages/olympiad.py", title="Олимпиады"),
-    st.Page("pages/surveys.py", title="Опросы"),
-    st.Page("pages/feedback.py", title="Обратная связь"),
+    st.Page("sections/personal_account.py", title="Личный кабинет"),
+    st.Page("sections/olympiad.py", title="Олимпиады"),
+    st.Page("sections/surveys.py", title="Опросы"),
+    st.Page("sections/feedback.py", title="Обратная связь"),
   ]
 }
 
@@ -20,4 +20,4 @@ if st.session_state["authenticated"]:
   pg.run()
 
 else:
-  pg = st.Page("pages/login.py", title="Вход")
+  pg = st.Page("sections/login.py", title="Вход")
