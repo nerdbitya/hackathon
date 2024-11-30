@@ -2,19 +2,21 @@ import streamlit as st
 
 st.title("Опросы")
 
-st.write("Почему Вы решили заниматься робототехникой?")
 texts = {
   1: st.empty(),
   2: st.empty(),
   3: st.empty(),
 }
 
+st.write("Почему Вы решили заниматься робототехникой?")
+texts[1] = st.text_area("Ответ", key=1)
+
 st.write("Что Вам больше всего нравится в программировании (программирование, \
           сборка роботов, искуственный интеллект и т.д.)?")
-texts.append(st.text_area("Ответ", key=2))
+texts[2] = st.text_area("Ответ", key=2)
 
 st.write("Есть ли у Вас проект или идея, которую Вы хотели бы реализовать?")
-texts.append(st.text_area("Ответ", key=3))
+texts[3] = st.text_area("Ответ", key=3)
 
 but = st.button("Отправить")
 if but:
